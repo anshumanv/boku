@@ -58,7 +58,7 @@ const prompts = [
 		default() {
 			return guessEmail();
 		},
-		message: 'Your email address:',
+		message: 'Your email address: ',
 		when: !program.email
 	},
 	{
@@ -67,7 +67,7 @@ const prompts = [
 		default(answers) {
 			return guessGitHubUsername(answers.email);
 		},
-		message: 'GitHub user or org name:',
+		message: 'GitHub username: ',
 		when: !program.github
 	},
 	{
@@ -76,7 +76,7 @@ const prompts = [
 		default(answers) {
 			return answers.twitter;
 		},
-		message: 'Your twitter handle:',
+		message: 'Your twitter handle: ',
 		when: !program.twitter
 	},
 	{
@@ -85,7 +85,7 @@ const prompts = [
 		default(answers) {
 			return answers.web;
 		},
-		message: 'Your website or portfolio link:',
+		message: 'Your website or portfolio link: ',
 		when: !program.web
 	},
 	{
@@ -94,7 +94,7 @@ const prompts = [
 		default(answers) {
 			return answers.web;
 		},
-		message: 'Link to your blog',
+		message: 'Link to your blog: ',
 		when: !program.blog
 	},
 	{
@@ -103,7 +103,7 @@ const prompts = [
 		default(answers) {
 			return answers.linkedin;
 		},
-		message: 'Link to your linkedIn profile',
+		message: 'LinkedIn handle: ',
 		when: !program.linkedin
 	},
 	{
@@ -112,7 +112,7 @@ const prompts = [
 		default(answers) {
 			return answers.github || kebabCase(path.basename(destination));
 		},
-		message: 'Repository name:',
+		message: 'Name for this repo: ',
 		when: !program.repo
 	}
 ];
