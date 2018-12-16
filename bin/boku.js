@@ -37,7 +37,7 @@ const destination = program.args.length === 0 ?
 const prompts = [
   {
     type: 'input',
-    name: 'author',
+    name: 'name',
     default() {
       return guessAuthor();
     },
@@ -121,12 +121,12 @@ console.log(chalk.blue('Let\'s generate a quick publish-ready cli for you!'));
 
 inquirer.prompt(prompts)
 	.then(answers => {
-    console.log(answers);
-		answers.author = stringifyAuthor({
-			name: answers.github,
+    answers.author = stringifyAuthor({
+      name: answers.name,
 			email: answers.email,
 			url: answers.web
     });
+    console.log(answers);
 		answers.year = new Date().getFullYear();
 		return scaffold(program.template, destination, answers, {
 			overwrite: Boolean(program.overwrite)
