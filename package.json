@@ -1,6 +1,6 @@
 {
   "name": "boku",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A personalised cli scaffolding tool",
   "bin": {
     "boku": "./bin/boku.js"
