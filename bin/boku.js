@@ -5,7 +5,7 @@
 const path = require('path');
 const inquirer = require('inquirer');
 const program = require('commander');
-const { scaffold } = require('egad');
+const {scaffold} = require('egad');
 const kebabCase = require('lodash.kebabcase');
 const chalk = require('chalk');
 const spawn = require('cross-spawn');
@@ -35,15 +35,15 @@ const destination = program.args.length === 0 ?
 	path.resolve(process.cwd(), program.args.shift());
 
 const prompts = [
-  {
-    type: 'input',
-    name: 'name',
-    default() {
-      return guessAuthor();
-    },
-    message: 'Your full name:',
-    when: !program.author
-  },
+	{
+		type: 'input',
+		name: 'name',
+		default() {
+			return guessAuthor();
+		},
+		message: 'Your full name:',
+		when: !program.author
+	},
 	{
 		type: 'input',
 		name: 'description',
@@ -69,39 +69,39 @@ const prompts = [
 		},
 		message: 'GitHub user or org name:',
 		when: !program.github
-  },
-  {
+	},
+	{
 		type: 'input',
 		name: 'twitter',
 		default(answers) {
-			return answers.twitter
+			return answers.twitter;
 		},
 		message: 'Your twitter handle:',
 		when: !program.twitter
-  },
-  {
+	},
+	{
 		type: 'input',
 		name: 'web',
 		default(answers) {
-			return answers.web
+			return answers.web;
 		},
 		message: 'Your website or portfolio link:',
 		when: !program.web
-  },
-  {
+	},
+	{
 		type: 'input',
 		name: 'blog',
 		default(answers) {
-			return answers.web
+			return answers.web;
 		},
 		message: 'Link to your blog',
 		when: !program.blog
-  },
-  {
+	},
+	{
 		type: 'input',
 		name: 'linkedin',
 		default(answers) {
-			return answers.linkedin
+			return answers.linkedin;
 		},
 		message: 'Link to your linkedIn profile',
 		when: !program.linkedin
@@ -121,12 +121,12 @@ console.log(chalk.blue('Let\'s generate a quick publish-ready cli for you!'));
 
 inquirer.prompt(prompts)
 	.then(answers => {
-    answers.author = stringifyAuthor({
-      name: answers.name,
+		answers.author = stringifyAuthor({
+			name: answers.name,
 			email: answers.email,
 			url: answers.web
-    });
-    console.log(answers);
+		});
+		console.log(answers);
 		answers.year = new Date().getFullYear();
 		return scaffold(program.template, destination, answers, {
 			overwrite: Boolean(program.overwrite)

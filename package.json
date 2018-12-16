@@ -4,7 +4,8 @@
   "description": "A personalised cli scaffolding tool",
   "main": "bin/boku.js",
   "scripts": {
-    "test": "xo"
+    "test": "xo",
+    "precommit": "npm run test"
   },
   "repository": {
     "type": "git",
