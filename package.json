@@ -1,0 +1,36 @@
+{
+  "name": "boku",
+  "version": "1.0.0",
+  "description": "A personalised cli scaffolding tool",
+  "main": "bin/boku.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshumanv/boku.git"
+  },
+  "keywords": [
+    "cli",
+    "boku",
+    "user",
+    "scaffold"
+  ],
+  "author": "anshumanv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anshumanv/boku/issues"
+  },
+  "homepage": "https://github.com/anshumanv/boku#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "conjecture": "^0.1.2",
+    "cross-spawn": "^6.0.5",
+    "egad": "^0.2.0",
+    "husky": "^1.2.1",
+    "inquirer": "^6.2.1",
+    "lodash.kebabcase": "^4.1.1",
+    "stringify-author": "^0.1.3"
+  }
+}
