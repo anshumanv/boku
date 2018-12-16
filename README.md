@@ -35,6 +35,16 @@ $ npm publish
 $ npx username
 ```
 
+OR
+
+```sh
+$ npm i -g boku
+$ boku
+
+//=> Push and publish
+```
+
+
 ### Image
 
 * Presently the image is fetched from the GitHub API of the provided username.
