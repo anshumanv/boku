@@ -2,6 +2,9 @@
   "name": "boku",
   "version": "1.0.0",
   "description": "A personalised cli scaffolding tool",
+  "bin": {
+    "boku": "./bin/boku.js"
+  },
   "main": "bin/boku.js",
   "scripts": {
     "test": "xo",
