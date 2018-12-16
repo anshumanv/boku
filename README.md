@@ -35,15 +35,35 @@ $ npm publish
 $ npx username
 ```
 
+### Image
+
+* Presently the image is fetched from the GitHub API of the provided username.
+
+* To use a custom image from url, simply swap out the image url `avatar_url`.
+
+* To use an image file, 
+
+```sh
+const path = require('path);
+.
+.
+terminalImage.file(path.join(__dirname, 'image_name.xyz'))
+.
+.
+termImg.file(path.join(__dirname, 'image_name.xyz'), { fallback })
+
+```
+
+
 ## Uses
 
-The handlebars template which is scaffolded out is [here](https://github.com/anshumanv/my-cli-template)
+The handlebars template which is scaffolded out is [here](https://github.com/anshumanv/my-cli-template).
 
 
 ## Thanks
 
-* Amazing boku no hero academia artwork by [Fazendaaa](https://github.com/Fazendaaa). 🆒
-* Template inspiration from the [sindresorhus](https://github.com/sindresorhus/sindresorhus) cli. 🙏
+* Amazing [boku no hero academia](https://en.wikipedia.org/wiki/My_Hero_Academia) artwork by [Fazendaaa](https://github.com/Fazendaaa). 🆒
+* Template heavily inspired from the [sindresorhus](https://github.com/sindresorhus/sindresorhus) cli. 🙏
 
 
 ## Author
@@ -57,4 +77,4 @@ The handlebars template which is scaffolded out is [here](https://github.com/ans
 
 ## Contribute
 
-Found a bug, please [create an issue](https://github.com/anshumanv/boku/issues/new)
+Found a bug? please [create an issue](https://github.com/anshumanv/boku/issues/new)
