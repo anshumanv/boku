@@ -8,7 +8,7 @@
   "main": "bin/boku.js",
   "scripts": {
     "test": "xo",
-    "precommit": "npm run test"
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -36,5 +36,11 @@
     "inquirer": "^6.2.1",
     "lodash.kebabcase": "^4.1.1",
     "stringify-author": "^0.1.3"
+  },
+  "devDependencies": {
+    "lint-staged": "^8.1.0"
+  },
+  "lint-staged": {
+    "*.js": ["xo --fix", "git add"]
   }
 }
