@@ -25,6 +25,7 @@ program
 	.option('-t, --twitter <twitter>', 'Your twitter handle')
 	.option('-w, --web <website>', 'Your website URL')
 	.option('-b, --blog <blog>', 'Link to your blog')
+	.option('-c, --contact <contact>', 'Place where you\'d like to be contacted')
 	.option('--overwrite', 'Overwrite existing files', false)
 	.option('--template <template-url>', 'URL of custom template',
 		TEMPLATE_REPO_URL)
@@ -105,6 +106,15 @@ const prompts = [
 		},
 		message: 'LinkedIn handle: ',
 		when: !program.linkedin
+	},
+	{
+		type: 'input',
+		name: 'contact',
+		default(answers) {
+			return `https://twitter.com/${answers.twitter}`;
+		},
+		message: 'Contact link: ',
+		when: !program.contact
 	},
 	{
 		type: 'input',
